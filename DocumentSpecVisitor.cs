@@ -91,4 +91,16 @@ public interface IDocumentSpecVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitNested([NotNull] DocumentSpecParser.NestedContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="DocumentSpecParser.list_item"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitList_item([NotNull] DocumentSpecParser.List_itemContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="DocumentSpecParser.list_number"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitList_number([NotNull] DocumentSpecParser.List_numberContext context);
 }
